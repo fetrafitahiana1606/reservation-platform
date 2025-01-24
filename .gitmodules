@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/fetrafitahiana1606/reservation-frontend.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/fetrafitahiana1606/reservation-backend.git
