@@ -17,10 +17,10 @@ class Task
     private ?int $id = null;
 
     #[ORM\Column(length: 32)]
-    private ?string $Designation = null;
+    private ?string $name = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column]
     private ?bool $isFinished = null;
@@ -30,28 +30,28 @@ class Task
         return $this->id;
     }
 
-    public function getDesignation(): ?string
+    public function getName(): ?string
     {
-        return $this->Designation;
+        return $this->name;
     }
 
-    public function setDesignation(string $Designation): static
+    public function setName(string $name): static
     {
-        $this->Designation = $Designation;
+        $this->name = $name;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(string $Description): static
+    public function setDescription(string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
-        return $this;
+        return $this->$description;
     }
 
     public function isFinished(): ?bool
